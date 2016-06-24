@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+  </head>
+  <body>
+  		<h1>Welcome, {{ user['alias'] }}</h1>
+  		<h2>{{ user['pokes'] }} people poked you</h2>
+
+  		<form action = '/'
+
+  		<form action = '/addpoke'
+  		<h2>People you may want to poke:</h2>
+  			{% for user in users %}
+  				Name: <p>{{ user['name'] }}</p>
+  				Alias: <p>{{ user['alias'] }}</p>
+  				Email Address: <p>{{ user['email'] }}</p>
+  				Poke History: <p>{{ user['pokes'] }} pokes</p>
+
+  				<input type = 'submit' value = 'Poke!'>
+  			{% endfor %}
+  		</form>
+
+  		<form action = '/logout'>
+  			<input type = 'submit' value = 'Logout'>
+  		</form>
+  </body>
+</html>

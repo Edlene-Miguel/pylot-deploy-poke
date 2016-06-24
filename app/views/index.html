@@ -3,6 +3,36 @@
     <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
   </head>
   <body>
-    The best place to start is the "WelcomeController.py" file in app/controllers.
+<!--     {% with messages = get_flashed_messages(with_categories=true) %}
+		{% if messages %}
+			{% for category, message in messages %}
+				<p>{{message}}</p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %} -->
+
+	<h1>Welcome to Poke!</h1>
+
+	<form action = '/pokes/register' method = 'post'>
+		<h2>Register</h2>
+			Name: <input type = 'text' name = 'name'><br>
+			Alias: <input type = 'text' name = 'alias'><br>
+			Email: <input type = 'email' name = 'email'><br>
+			Password: <input type = 'password' name = 'password'><br>
+				<p>*Password should be at least 8 characters</p>
+			Confirm Password: <input type = 'password' name = 'confirm_password'><br>
+<!-- 			Date of Birth: <input type = 'date' name = 'birthdate'><br> -->
+
+			<input type = 'submit' value = 'Register'>
+			<hr>
+	</form>
+
+	<form action = '/pokes/login' method = 'post'>
+		<h2>Login</h2>
+			Email: <input type = 'email' name = 'email'><br>
+			Password: <input type = 'password' name = 'password'><br>
+
+			<input type = 'submit' value = 'Login'>
+	</form>
   </body>
 </html>
